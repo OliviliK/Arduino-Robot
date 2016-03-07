@@ -19,7 +19,7 @@
  *   S8 key on right is stored in bit 0
  */
  
-#include "TM1638.h"
+#include <TM1638.h>
 
 TM1638  panel(44,42,40);      // Pin order: STB, CLK, DIO
 
@@ -89,5 +89,3 @@ void synch(uint32_t ms) {                 // General purpose synchronization
   uint32_t  delta = ms - (now % ms);      // Calculate time for the "next" milliseconds
   while ((millis() - now) < delta);
 }
-
-
