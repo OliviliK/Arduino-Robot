@@ -1,0 +1,20 @@
+# Class Name
+TM1638	KEYWORD1
+
+# Methods
+allOff	KEYWORD2
+allOn	KEYWORD2
+getButton	KEYWORD2
+getButtons	KEYWORD2
+isKey	KEYWORD2
+isKeyPressed	KEYWORD2
+setBrightness	KEYWORD2
+setDisplayOff	KEYWORD2
+setDisplayOn	KEYWORD2
+setLED	KEYWORD2
+setLEDs	KEYWORD2
+setSegments	KEYWORD2
+writeDec	KEYWORD2
+writeDec	KEYWORD2
+writeHex	KEYWORD2
+writeText	KEYWORD2
