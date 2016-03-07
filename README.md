@@ -1,6 +1,6 @@
-# arduino-robot
+# Arduino-Robot
 Arduino code used in teaching robots: 
-  * 6-wheel Mars Rover with 12 sensors, inluding IMU and ultrasonic sensor array
+  * 6-wheel Mars Rover with 17 sensors, inluding IMU and ultrasonic sensor array
   * 4-wheel robot with Lidar
   * 2-wheel robot with ESP8266
   
