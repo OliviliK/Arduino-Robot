@@ -1,0 +1,22 @@
+# Class Name
+
+Vnh2sp30	KEYWORD1
+
+# Method Names
+
+readCurrent	KEYWORD2
+current	KEYWORD2
+maxCurrent	KEYWORD2
+run	KEYWORD2
+power	KEYWORD2
+stop	KEYWORD2
+coast	KEYWORD2
+state	KEYWORD2
+
+# Enumerations
+
+MotorState	KEYWORD1
+initError	KEYWORD3
+isRunning	KEYWORD3
+isBreaking	KEYWORD3
+isCoasting	KEYWORD3
