@@ -21,7 +21,7 @@
  
 #include <TM1638.h>
 
-TM1638  panel(44,42,40);      // Pin order: STB, CLK, DIO
+TM1638  panel(37,36,35);      // Pin order: STB, CLK, DIO
 
 uint8_t asc     = 0;          // Scan through ASCII codes
 char    txt[] = "Xo.";        // Show the ASCII code in a string
