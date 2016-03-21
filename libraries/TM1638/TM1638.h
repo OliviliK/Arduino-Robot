@@ -30,6 +30,7 @@ class TM1638 {
     void      setLED(uint8_t led, uint8_t value);
     void      setSegments(uint8_t firstDigit, uint8_t pattern);
     void      writeText(uint8_t firstDigit, char* txt, uint8_t digitCount);
+    void      writeText(uint8_t firstDigit, char* txt);
     void      writeDec(uint8_t firstDigit, int32_t val, uint8_t digitCount);
     void      writeDec(uint8_t firstDigit, int32_t val, uint8_t digitCount, uint8_t decimals);
     void      writeHex(uint8_t firstDigit, uint32_t val, uint8_t digitCount);
@@ -55,3 +56,4 @@ private:
     void      endFrame();
 };
 #endif
+
