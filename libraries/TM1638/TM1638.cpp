@@ -194,7 +194,13 @@ void    TM1638::writeText(uint8_t firstDigit, char* txt, uint8_t digitCount){
   uint8_t fontNr, pattern;
   for (uint8_t i=firstDigit; i<8; i++) {
     if (digitCount == 0) return;
-    if (*txt == 0) return;
+    if (*txt == 0) {                      // Blank the trailing digits
+      do {
+        setSegments(i,0);                 // Set to blank
+        if (--digitCount == 0) return;    // All text consumed?
+      } while (++i<8);                    // All slots cosnumed?
+      return;
+    }
     if ((*txt < 0x20) || (*txt > 0x7E)) {
       pattern = BADFONT;
     } else {
@@ -211,6 +217,10 @@ void    TM1638::writeText(uint8_t firstDigit, char* txt, uint8_t digitCount){
     txt++;
     digitCount--;
   }
+}
+
+void    TM1638::writeText(uint8_t firstDigit, char* txt){
+  writeText(firstDigit,txt,8);
 }
 
 void    TM1638::writeDec(uint8_t firstDigit, int32_t val, uint8_t digitCount){
@@ -377,3 +387,4 @@ void  TM1638::startFrame() {
 void  TM1638::endFrame() {
   digitalWrite(_stbPin,HIGH);
 }
+
