@@ -12,7 +12,7 @@
  * - Pins 43, 44, 45, 46, 47, 48, and  49 for Trigger outputs
  * 
  * This version demonstrates the Ultrasonic Sensors on Wissahickon Rover.
- * The implementation code is described a blog post at
+ * The implementation code is described in a blog post at
  * 
  *  http://olliesworkshops.blogspot.com/2016/02/ultrasonic-sensor-array.html?view=classic
  *  
