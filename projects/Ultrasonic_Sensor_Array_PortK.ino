@@ -2,6 +2,12 @@
  * Created by Olavi Kamppari on 5/9/2016.
  */
 
+/** 
+ *  Updated by Olavi Kamppari on 5/17/2016
+ *   - move Setup after the init functions to resolve forward referencing for
+ *     older Arduino versions
+ */
+
 /**
  * Demonstrate the simultaneous usage of 6 parallel ultrasonic sensors.
  * Show the results on Excel Data Sheet.
@@ -12,7 +18,7 @@
  * - Pins 43, 44, 45, 46, 47, 48, and  49 for Trigger outputs
  * 
  * This version demonstrates the Ultrasonic Sensors on Wissahickon Rover.
- * The implementation code is described in a blog post at
+ * The implementation code is described a blog post at
  * 
  *  http://olliesworkshops.blogspot.com/2016/02/ultrasonic-sensor-array.html?view=classic
  *  
@@ -93,27 +99,6 @@ volatile uint16_t   minFail [CHCOUNT];    // Number of times where duration is t
 volatile uint16_t   maxFail [CHCOUNT];    // Number of times where duration is too high
 
 //---------------------------------------- Initialization -----------------------------
-void setup() {
-  doSetup(__FILE__);
-                              // Init interrupts
-  initPinChangeInterrupts();
-  initTriggerDelayTimer();
-                              // Init channels and print labels
-  Serial.print("ms");
-  for (int i = 0; i < CHCOUNT; i++) {
-    Serial.print("\tch");
-    Serial.print(i);
-    duration[i] = 0;
-    valOK[i]    = 0;
-    minFail[i]  = 0;
-    maxFail[i]  = 0;
-    pinMode(43 + i, OUTPUT);
-  }
-  Serial.println();
-
-  state       = start;
-  scanStart   = millis();
-}
 
 void doSetup(const char *fileName) {
   while (!Serial);            // Wait for the serial port to open
@@ -134,6 +119,28 @@ void initTriggerDelayTimer() {
   OCR2A     = 60;             // Extra delay between channels is 60/62500 = 0.96 ms
   TIMSK2    |= TIMERINTENA;   // Timer interrupt enable
   sei();
+}
+
+void setup() {
+  doSetup(__FILE__);
+                              // Init interrupts
+  initPinChangeInterrupts();
+  initTriggerDelayTimer();
+                              // Init channels and print labels
+  Serial.print("ms");
+  for (int i = 0; i < CHCOUNT; i++) {
+    Serial.print("\tch");
+    Serial.print(i);
+    duration[i] = 0;
+    valOK[i]    = 0;
+    minFail[i]  = 0;
+    maxFail[i]  = 0;
+    pinMode(43 + i, OUTPUT);
+  }
+  Serial.println();
+
+  state       = start;
+  scanStart   = millis();
 }
 
 //--------------------------------------------- Main Loop -----------------------------------
