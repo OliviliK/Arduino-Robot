@@ -21,3 +21,6 @@ For example, two Ultrasonic Sensor Cables can be tested at the same time.
 
 ##2 Optical Distance Sensor Tester
 Two SHARP 2Y0A21 optical disance sensors are used to measure the distance to objects in front of the Wissahickon Rover Robot.  The results are shown in the LED & KEY panel and Serial Plotter.  The Serial Plotter demonstrates the characteristic noise in the raw signal.
+
+##8 IR Collision Detector Tester
+Eight IR sensors (FC-51) are in the corners of the Wissahickon Rover Robot.  This tester shows in the LED & KEY panel which sensors are active.
