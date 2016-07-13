@@ -1,0 +1,12 @@
+# Class Name
+
+HC_SR04	KEYWORD1
+
+# Method Names
+
+selectSensors	KEYWORD2
+selectionMask	KEYWORD2
+readSensor	KEYWORD2
+
+# Enumerations
+
