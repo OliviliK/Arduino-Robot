@@ -18,6 +18,6 @@ This library allows the applications to use TM1638 based LED&KEY control panel.
 
 This library allows the applications to use Vnh2sp30 based motor controllers that support up to 30 A current from 5.5 - 16 V DC power supply.
 
-HC_SR04 Ultrasonic Sensor
+##HC_SR04 Ultrasonic Sensor
 
 This library allows the applications to use multiple, up to 7, ultrasonic distance sensors.  The distance range is from 30 mm up to 3 m.  If the target has good sound reflection, the readings are very stabile and accurate.  If the target is small or sound absorbing, then the readings are not very reliable. 
