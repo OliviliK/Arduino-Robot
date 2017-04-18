@@ -1,0 +1,22 @@
+# Class Name
+
+iPID	KEYWORD1
+
+# Method Names
+
+SetMode		KEYWORD2
+Execute		KEYWORD2
+SetCvLimits	KEYWORD2
+SetTuning	KEYWORD2
+SetDirection	KEYWORD2
+SetInterval	KEYWORD2
+Kp		KEYWORD2
+Ki		KEYWORD2
+Kd		KEYWORD2
+PTerm		KEYWORD2
+ITerm		KEYWORD2
+DTerm		KEYWORD2
+IsRevDirection	KEYWORD2
+IsAutoMode	KEYWORD2
+
+# Enumerations
