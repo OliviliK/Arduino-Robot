@@ -1,5 +1,10 @@
 /**
  *  Created by Olavi Kamppari on 3/19/2016.
+ *
+ *	Updated by Olavi Kamppari on 3/21/2017
+ *  - remove exp filter due to
+ *    > ramping in WH_Rover
+ *	  > PID control in FTC motor controller
  */
 
 /**
@@ -85,12 +90,8 @@ void Vnh2sp30::run(int16_t power) {     // 0 = no power, 1023 = full power
 
   if (power > 1023)   power = 1023;     // Clamp the setpoints
   if (power < -1023)  power = -1023;
-  int16_t dp = power - _power;
-  if ((dp > 5) || (dp < -5)) {
-    _power  = (power + 4*_power)/5;     // Use exp filter as choke
-  } else {
-    _power  = power;                    // No choke for the final steps
-  }
+  _power = power;
+
   if (_power > 0) {
     analogWrite(_pwmPin, _power);       // Forward command
     digitalWrite(_aPin, HIGH);
