@@ -1,0 +1,9 @@
+# Class Name
+
+GP2Y0A21	KEYWORD1
+
+# Method Names
+
+GP2Y0A21distance	KEYWORD2
+
+# Enumerations
