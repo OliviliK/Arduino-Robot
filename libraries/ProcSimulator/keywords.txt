@@ -1,0 +1,22 @@
+# Class Name
+
+ProcSimulator	KEYWORD1
+
+# Method Names
+
+SetCV	KEYWORD2
+SetLoad	KEYWORD2
+CV	KEYWORD2
+PV	KEYWORD2
+ActGainPct	KEYWORD2
+MinCV	KEYWORD2
+MaxCV	KEYWORD2
+Distance	KEYWORD2
+Force	KEYWORD2
+Acceleration	KEYWORD2
+Speed	KEYWORD2
+Position	KEYWORD2
+
+# Enumerations
+
+
