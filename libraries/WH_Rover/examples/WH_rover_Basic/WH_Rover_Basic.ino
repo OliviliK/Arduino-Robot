@@ -29,8 +29,8 @@ bool obstacleDetected() {
 }
 
 bool targetInRange() {
-    int16_t odsL    getODS(ODS_L);
-    int16_t odsR    getODS(ODS_R);
+    int16_t odsL    = getODS(ODS_L);
+    int16_t odsR    = getODS(ODS_R);
     if (odsL < 100) return false;
     if (odsL > 500) return false;
     if (odsR < 100) return false;
